@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Monitor</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+    }
+    h2 {
+      margin: 0 0 16px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .status {
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .status.active {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+    .status.inactive {
+      background-color: #fed7d7;
+      color: #742a2a;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+    }
+    input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4338ca;
+    }
+    button:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+    .info {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+    .error {
+      color: #dc2626;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    .device-info {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 12px;
+      padding: 8px;
+      background-color: #f9fafb;
+      border-radius: 4px;
+    }
+    .device-info p {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>YouTube Monitor</h2>
+
+  <div id="statusContainer"></div>
+
+  <div id="activationForm">
+    <div class="form-group">
+      <label for="activationCode">Activation Code</label>
+      <input type="text" id="activationCode" placeholder="Enter 12-character code" maxlength="12" />
+    </div>
+    <button id="activateBtn">Activate Device</button>
+    <p class="info">Get an activation code from your dashboard</p>
+    <div id="error" class="error"></div>
+  </div>
+
+  <div id="deviceInfo" style="display: none;"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

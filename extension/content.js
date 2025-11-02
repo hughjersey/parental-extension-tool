@@ -11,8 +11,8 @@
   let fallbackCheckInterval = null;
   const MAX_EXTRACTION_ATTEMPTS = 20; // Increased from 10
   const EXTRACTION_RETRY_DELAY = 500; // ms
-  const INITIAL_EXTRACTION_DELAY = 2000; // ms - increased from 1000ms for initial page loads
-  const NAVIGATION_EXTRACTION_DELAY = 800; // ms - faster for SPA navigation
+  const INITIAL_EXTRACTION_DELAY = 3000; // ms - increased from 1000ms for initial page loads
+  const NAVIGATION_EXTRACTION_DELAY = 3000; // ms - wait for page to fully update video title
   const FALLBACK_CHECK_INTERVAL = 3000; // ms - check periodically if extraction failed
   const DEBUG = true; // Enable detailed logging
 
